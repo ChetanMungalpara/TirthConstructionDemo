@@ -4,10 +4,9 @@ import {
   User,
   Mail,
   Phone,
-  ChevronDown,
 } from 'lucide-react';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom';
 const Footer = () => {
   const socialIcons = [
     { name: 'Facebook', href: '#', icon: <Facebook size={16} /> },
@@ -24,10 +23,10 @@ const Footer = () => {
         <div className="w-fit">
           <h3 className="text-base font-semibold text-white mb-4">Useful Links</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-white transition">Home</a></li>
-            <li><a href="#" className="hover:text-white transition">Contractors</a></li>
-            <li><a href="#" className="hover:text-white transition">Projects</a></li>
-            <li><a href="#" className="hover:text-white transition">ContactUs</a></li>
+            <li><Link to="/" className="hover:text-white transition">Home</Link></li>
+            <li><Link to="/contractors" className="hover:text-white transition">Contractors</Link></li>
+            <li><Link to="/projects" className="hover:text-white transition">Projects</Link></li>
+            <li><Link to="/contact" className="hover:text-white transition">ContactUs</Link></li>
           </ul>
         </div>
 
